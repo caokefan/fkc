@@ -1,5 +1,6 @@
 #include "Channel.h"
 #include "EpollPoller.h"
+#include <cstdio>
 #include <cstring>
 #include <unistd.h>
 
@@ -103,9 +104,9 @@ void EpollPoller::update(int operation, Channel *channel)
     {
         if (operation == EPOLL_CTL_DEL)
         {
-
+            printf("epoll_ctl del error\n");
         } else {
-            
+            printf("epoll_ctl add/mod error\n");
         }
     }
 

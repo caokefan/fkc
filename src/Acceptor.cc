@@ -9,7 +9,7 @@ static int create_nonblock_sockfd()
     int sockfd = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK | SOCK_CLOEXEC, 0);
     if(sockfd < 0)
     {
-
+        printf("Acceptor: sockfd < 0\n");
     }
     return sockfd;
 }
@@ -49,6 +49,6 @@ void Acceptor::handle_read()
             close(connfd);
         }
     } else {
-        
+        printf("connfd <= 0\n");
     }
 }

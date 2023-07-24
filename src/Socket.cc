@@ -45,7 +45,7 @@ void Socket::shutdown_write()
 {
     if(::shutdown(sockfd_, SHUT_WR) < 0)
     {
-
+        printf("shutdown error\n");
     }
 }
 

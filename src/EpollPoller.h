@@ -12,8 +12,8 @@ public:
 
     void poll(int timeout, ChannelList *active_channels) override;
 
-    void update_channel(Channel *channel);
-    void remove_channel(Channel *channel);
+    void update_channel(Channel *channel) override;
+    void remove_channel(Channel *channel) override;
 private:
     void fill_active_channels(int events_num, ChannelList *active_channels) const;
     void update(int operation, Channel *channel);
